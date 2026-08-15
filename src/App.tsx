@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import type { Tab } from './components/BottomNav'
 import BottomNav from './components/BottomNav'
 import NewOrder from './components/NewOrder'
@@ -72,6 +73,7 @@ export default function App() {
       </main>
 
       <BottomNav active={tab} onChange={setTab} pendingCount={pendingCount} />
+      <Analytics />
     </div>
   )
 }
